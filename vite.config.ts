@@ -10,7 +10,7 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 // Build locally with:  VITE_STATIC=1 bun run build
 // If deploying to https://<user>.github.io/<repo>/, also set VITE_BASE="/<repo>/"
 const isStatic = process.env.VITE_STATIC === "1";
-const base = process.env.VITE_BASE || "/cookiew/";
+const base = process.env.VITE_BASE || "/cookieware/";
 
 export default defineConfig({
   vite: { base },
