@@ -31,12 +31,12 @@ jobs:
           VITE_BASE: ${{ vars.VITE_BASE || '/' }}
         run: bun run build
       - name: Add SPA 404 fallback
-        run: cp dist/index.html dist/404.html || true
+        run: cp dist/client/index.html dist/client/404.html || true
       - name: Add .nojekyll
-        run: touch dist/.nojekyll
+        run: touch dist/client/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: dist/client
       - run: ls -R dist
 
   deploy:
